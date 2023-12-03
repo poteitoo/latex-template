@@ -1,0 +1,14 @@
+{
+	"name": "latex_ubuntu",
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"James-Yu.latex-workshop",
+				"GitHub.copilot",
+				"tomoki1207.pdf"
+			]
+		}
+	}
+	// Features to add to the dev container. More info: https://containers.dev/features.
+}
