@@ -7,6 +7,8 @@
         "**/*.out": true,
         "**/*.log": true,
         "**/*.sty": true,
+        "README.md": true,
+        "screenshot.png": true,
         "**/*.synctex.gz": true,
         "**/*.fdb_latexmk": true,
     }
