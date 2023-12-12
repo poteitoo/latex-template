@@ -6,10 +6,61 @@
         "**/*.fls": true,
         "**/*.out": true,
         "**/*.log": true,
-        "**/*.sty": true,
-        "README.md": true,
-        "screenshot.png": true,
+        "**/*.dvi": true,
+        "**/*.RData": true,
+        "**/*.Rhistory": true,
         "**/*.synctex.gz": true,
         "**/*.fdb_latexmk": true,
-    }
+        "README.md": true,
+        "yarn.lock": true,
+        ".gitignore": true,
+        "node_modules": true,
+        ".devcontainer": true,
+        "screenshot.png": true,
+    },
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "uplatex",
+            "command": "uplatex",
+            "args": [
+                "-kanji=utf8",
+                "-no-guess-input-enc",
+                "%DOC%"
+            ],
+        },
+        {
+            "name": "dvipdfmx",
+            "command": "dvipdfmx",
+            "args": [
+                "%DOCFILE%.dvi"
+            ],
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "%DOC%"
+            ],
+        },
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "only_dvi",
+            "tools": [
+                "uplatex",
+                "dvipdfmx",
+            ]
+        },
+        {
+            "name": "uplatex",
+            "tools": [
+                "latexmk",
+                "uplatex",
+                "dvipdfmx",
+            ]
+        },
+    ],
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80
 }
